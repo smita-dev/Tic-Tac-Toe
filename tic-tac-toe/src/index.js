@@ -13,7 +13,7 @@ serviceWorker.unregister();
 class Square extends React.Component{
     render(){
         return(
-            <button className="Square">
+            <button className="Square" onClick={()=>{alert("ewww")}}>
                 {this.props.value}
             </button>
         );
@@ -26,7 +26,6 @@ class Board extends React.Component{
     }
     render(){
         const status='Next player: X';
-
         return(
             <div>
                 <div className="status">{status}</div>
