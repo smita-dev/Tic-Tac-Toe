@@ -11,10 +11,15 @@ serviceWorker.unregister();
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 class Square extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={value:null,}
+    }
     render(){
         return(
-            <button className="Square" onClick={()=>{alert("ewww")}}>
-                {this.props.value}
+            <button className="Square" onClick={()=>this.setState({value:"X"})}>
+                {/* {this.props.value} */}
+                {this.state.value}
             </button>
         );
     }
